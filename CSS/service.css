@@ -1,0 +1,302 @@
+a {
+  text-decoration: none;
+  color: inherit;  
+}
+
+@media screen and (min-width : 769px){
+  body {
+    width: auto;
+    position: relative;
+  }
+  header {
+    position: absolute;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color:white;
+    color: black;
+  }
+  .header-ttl {
+    font-size: 24px;
+    width: 80px;
+    margin-left: 30px;
+  }
+  #navigation ul {
+    display: flex;
+    font-weight: bold;
+    margin-left: 15vw;
+  }
+  #navigation ul li:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+  }
+  #navigation ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width : 768px){
+header {
+  position: relative;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 70px;
+}
+.header-ttl {
+  font-size: 24px;
+  width: 80px;
+  margin-left: 20px;
+}
+/* ハンバーガーメニューの中身 */
+#navigation {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  background: white;
+  z-index: 1;
+  transition: 0.5s;
+}
+#navigation ul {
+  padding-top: 100px;
+}
+#navigation ul li {
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+}
+#navigation ul li a {
+  display: block;
+  text-decoration: none;
+  color: rgb(3, 74, 182);
+  margin-bottom: 20px;
+  padding: 13px;
+}
+#navigation ul li a:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+/* ハンバーガーメニューの3本線クリック前 */
+#drawer-navigation {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 35px;
+  height: 30px;
+  z-index: 2;
+}
+#drawer-navigation .drawer-line {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 4px;
+  background: black;
+  transition: 0.5s;
+}
+#drawer-navigation #line1 {
+  top: 0;
+}
+#drawer-navigation #line2 {
+  top: 13px;
+}
+#drawer-navigation #line3 {
+  bottom: 0;
+}
+/* ハンバーガーメニューの3本線クリック後 */
+.in {
+  transform: translateX(100%);
+}
+#drawer-navigation .line_1 {
+  transform: translateY(13px) rotate(-45deg);
+}
+#drawer-navigation .line_2 {
+  opacity: 0;
+}
+#drawer-navigation .line_3 {
+  transform: translateY(-13px) rotate(45deg);
+}
+}
+
+
+.topview {
+  display: flex;
+  justify-content: center;
+  background: url(../img/mv.png) no-repeat center;
+  background-size: cover;
+  height: 330px;
+}
+.topview__ttl {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 180px;
+}
+
+
+
+.service__contents-wrap {
+  padding: 70px 20px;
+}
+.service__contents {
+  display: flex;
+  margin: 10px;
+  border-top: 1px solid;
+  padding: 20px 0;
+}
+@media screen and (max-width : 768px){
+  .service__contents {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.service__contents:last-child {
+  border-bottom: 1px solid;
+}
+.service__contents img {
+  width: 290px;
+}
+@media screen and (max-width : 768px){
+  .service__contents img {
+    width: 100%;
+  }
+}
+@media screen and (min-width : 769px){
+  .service__sub-ttl-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width : 768px){
+  .service__sub-ttl-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+}
+.service__sub-ttl {
+  font-size:x-large;
+  line-height: 35px;
+}
+.service__sub-ttl-txt {
+  line-height: 25px;
+}
+
+
+.contact {
+  background-color: rgb(241, 242, 243);
+}
+.contact__ttl-wrap {
+  padding: 80px 0 50px;
+}
+.contact__ttl {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.contact__ttl-txt {
+  text-align: center;
+}
+@media screen and (max-width : 768px){
+  .contact__ttl-txt {
+    text-align: center;
+    margin: 0 30px;
+  }
+}
+.contact__button-wrap {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.contact__button {
+  display:inline-block;
+  background-color: rgb(226, 0, 0);
+  color: white;
+  padding: 15px 100px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.contact__button:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+
+.footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (min-width : 769px){
+  .footer-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+  }
+}
+@media screen and (max-width : 768px){
+  .footer-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 25px 50px;
+    gap: 0 200px;
+  }
+}
+@media screen and (min-width : 769px){
+  .footer-copyright{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width : 768px){
+  .footer-copyright{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width : 769px){
+  .footer-nav-list {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width : 768px){
+  .footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width : 769px){
+  .footer-nav-item:after {
+    content: "|";
+    display: inline-block;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width : 769px){
+  .footer-nav-item:last-child:after {
+    content: none;
+  }
+}
+@media screen and (max-width : 768px){
+  .footer-nav-item {
+    padding: 10px 0;
+  }
+}
+.footer-nav-item:hover {
+   opacity: 0.6;
+   transition: 0.5s;
+}
